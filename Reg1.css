@@ -1,0 +1,537 @@
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url(fonts/HelveticaNeue-01.ttf);
+}
+body{
+    /* position: relative;
+    width: 100%;
+    height: 100%; */
+
+    background: rgb(249, 249, 249);
+}
+
+textarea{
+    padding: 12px 20px;
+    box-sizing: border-box;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+input[type=text] {
+    /* width: 100%; */
+    padding: 12px 20px;
+    /* margin: 8px 0; */
+    /* box-sizing: border-box; */
+  }
+
+
+
+#Right{
+    /* რეზუმე */
+
+
+    position: absolute;
+    width: 822px;
+    height: 1080px;
+    right: 0px;
+    top: 0px;
+
+    background: #FFFFFF;
+}
+#ellipse{
+    /* Ellipse 1 */
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 48px;
+    top: 45px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    text-align: center;
+    justify-content: center;
+}
+
+#ellipse img{
+    position: absolute;
+    width: 9.21px;
+    height: 16px;
+    top: 10px;
+    left: 15px;
+}
+
+
+.name{
+    /* Input Fields */
+
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+    gap: 8px;
+
+    position: absolute;
+    width: 419px;
+    height: 122px;
+    left: calc(50% - 419px/2 - 624.5px);
+    top: 157px;
+}
+
+.name p{
+    /* Hint */
+
+
+    width: 371px;
+    height: 21px;
+
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    /* identical to box height, or 150% */
+
+    display: flex;
+    align-items: center;
+
+    /* შავი/500 */
+
+    color: #2E2E2E;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+
+.saxeli{
+    /* Label */
+
+
+    width: 371px;
+    height: 21px;
+
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    /* identical to box height, or 131% */
+
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    }
+
+    #nameIn{
+        /* Frame 133 */
+
+
+        box-sizing: border-box;
+
+        width: 371px;
+        height: 48px;
+
+        background: #FFFFFF;
+        border: 1px solid #BCBCBC;
+        border-radius: 4px;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 1;
+        align-self: stretch;
+        flex-grow: 0;
+    }
+    
+    .Hint1{
+        /* width: 371px;
+        height: 21px; */
+
+        font-family: 'Helvetica Neue';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 21px;
+        /* identical to box height, or 150% */
+
+        display: flex;
+        align-items: center;
+
+        /* შავი/500 */
+        color: #2E2E2E;
+    }
+
+    .Surname{
+        /* Input Fields */
+
+
+        /* Auto layout */
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+        gap: 8px;
+
+        position: absolute;
+        width: 419px;
+        height: 122px;
+        left: calc(50% - 419px/2 - 197.5px);
+        top: 157px;
+    }
+
+
+    .photo{
+        /* პირადი ფოტოს ატვირთვა */
+
+
+        position: absolute;
+        width: 232px;
+        height: 22px;
+        left: 150px;
+        top: 325px;
+
+        font-family: 'Helvetica Neue';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        /* identical to box height */
+
+
+        /* off black */
+
+        color: #1A1A1A;
+
+    }
+
+    #PhotoUpload{
+        /* Frame 151 */
+
+
+        /* Auto layout */
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 10px 12px;
+        gap: 10px;
+
+        position: absolute;
+        width: 107px;
+        height: 27px;
+        left: 401px;
+        top: 325px;
+
+        background: #0E80BF;
+        border-radius: 4px;
+        color: white;
+        cursor: pointer;
+        border-style: none;
+    }
+
+
+
+
+
+
+
+
+
+#PersonalInfo{
+    /* ᲞᲘᲠᲐᲓᲘ ᲘᲜᲤᲝ */
+
+
+    position: absolute;
+    width: 192.769px;
+    height: 29px;
+    left: 149px;
+    top: 47px;
+
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+
+    /* off black */
+
+    color: #1A1A1A;
+}
+
+#line{
+    /* Line 13 */
+
+
+    position: absolute;
+    width: 798px;
+    height: 0px;
+    left: 150px;
+    top: 88px;
+
+    /* off black */
+
+    border: 1px solid #1A1A1A;
+}
+
+#firstPage{
+    /* 1/3 */
+
+
+    position: absolute;
+    width: 29px;
+    height: 24px;
+    left: 920px;
+    top: 49px;
+
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height */
+
+    text-align: right;
+
+    /* off black */
+
+    color: #1A1A1A;
+}
+
+#aboutMe{
+    /* Input Fields */
+
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+    gap: 8px;
+
+    position: absolute;
+    width: 846px;
+    height: 148px;
+    left: calc(50% - 846px/2 - 411px);
+    top: 393px;
+}
+
+#pepe{
+    /* Label */
+
+
+    width: 798px;
+    height: 21px;
+
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    /* identical to box height, or 131% */
+
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+#l77013{
+/* Frame 133 */
+
+
+box-sizing: border-box;
+
+width: 798px;
+height: 103px;
+
+background: #FFFFFF;
+border: 1px solid #BCBCBC;
+border-radius: 4px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 1;
+}
+
+.InputEmail{
+/* Input Fields */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 8px 24px;
+gap: 8px;
+
+position: absolute;
+width: 846px;
+height: 122px;
+left: calc(50% - 846px/2 - 411px);
+top: 558px;
+/* background-color: darkred; */
+}
+
+#InputEmail{
+    /* Input Fields */
+    
+    
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+    gap: 8px;
+    
+    position: absolute;
+    width: 846px;
+    height: 122px;
+    left: calc(50% - 846px/2 - 411px);
+    top: 558px;
+    /* background-color: darkred; */
+    }
+
+#InputNumber{
+    /* Input Fields */
+
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+    gap: 8px;
+
+    position: absolute;
+    width: 846px;
+    height: 122px;
+    left: calc(50% - 846px/2 - 411px);
+    top: 693px;
+    /* background-color: darkred; */
+}
+
+#EmailIn{
+    /* Frame 133 */
+
+
+    box-sizing: border-box;
+
+    width: 798px;
+    height: 48px;
+
+    background: #FFFFFF;
+    border: 1px solid #BCBCBC;
+    border-radius: 4px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+#NumberIn{
+    /* Frame 133 */
+
+
+    box-sizing: border-box;
+
+    width: 798px;
+    height: 48px;
+
+    background: #FFFFFF;
+    border: 1px solid #BCBCBC;
+    border-radius: 4px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+#button2{
+    /* ღილაკი */
+
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    gap: 20px;
+
+    position: absolute;
+    width: 151px;
+    height: 48px;
+    right: 972px;
+    bottom: 65px;
+
+    background: #6B40E3;
+    border-radius: 4px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+    justify-content: center;
+    letter-spacing: 0.08em;
+    color: white;
+    border-width: 0px;
+    /* cursor: pointer; */
+}
+#button2:hover{
+    cursor: pointer;
+    background-color: #7949FF;
+  }
+  #button2:focus{
+    background-color: #512FAF;
+  }
+#imageStar{
+    
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    left: 78px;
+    top: 994px;
+
+    /* background: url(LOGO-12.png); */
+}

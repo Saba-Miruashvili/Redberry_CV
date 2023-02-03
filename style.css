@@ -1,0 +1,79 @@
+body {
+    background: url(image/shutterstock_2189773743_1.jpg);
+    font-family: Arial, Helvetica, sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  #rgoli{
+    position: absolute;
+    width: 299px;
+    height: 299px;
+    left: 1076px;
+    top: 473px;
+
+    background: url(LOGO-40.png);
+    mix-blend-mode: multiply;
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+  }
+
+  #logoRed{
+    position: absolute;
+    width: 236px;
+    height: 38px;
+    left: 70px;
+    top: 25px;
+
+    background: url(LOGO-02);
+  }
+
+  #line{
+    position: absolute;
+    height: 0px;
+    left: 70px;
+    right: 70px;
+    top: 89px;
+
+    /* off black */
+
+    border: 1px solid #1A1A1A;
+  }
+
+  #button1{
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    gap: 20px;
+
+    position: absolute;
+    width: 464px;
+    height: 60px;
+    left: calc(50% - 464px/2);
+    top: 513px;
+    cursor: pointer;
+    /* off black */
+
+    background: #1A1A1A;
+    border-radius: 8px;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    justify-content: center;
+    color: #FFFFFF;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+ 
