@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="Reg1.css" />
+    <!-- <script src="Reg1reg.js"></script> -->
     <title>Reg1</title>
   </head> 
   <body>
@@ -14,41 +15,55 @@
     <div id="line"></div>
 <!-- ////Output////// -->
     <div id="Right">
+      <div id="nameOut"></div>
+      <div id="display_image"></div>
       <img  id="imageStar" src="image/bottomright.png" alt="RedStar">
+
+        <div id="dogHolder"><img id="dog" src="image/dogtail.png"> </div> <div id="emailOut"></div>
+
+        <div id="phoneHolder"><img id="phone" src="image/phone.png"> </div> <div id="NumberOut"></div>
+      <div id="About">ᲩᲔᲛ ᲨᲔᲡᲐᲮᲔᲑ</div>
+      <div id="l77013Out"></div>
+
     </div>
 <!-- ////Inputs//////  -->
     <div class="name">
       <div class="saxeli">სახელი</div>
-      <div><input type="text" id="nameIn"/></div>
+      <div><input pattern="[ა-ჰ].{1,30}" placeholder="ანზორ" type="text" id="nameIn" onkeyup="namefunction()"/></div>
       <div class="Hint1">მინიმუმ 2 ასო, ქართული ასოები</div>
     </div>
 
     <div class="Surname">
       <div class="saxeli">გვარი</div>
-      <div><input type="text" id="nameIn"/></div>
+      <div><input pattern="[ა-ჰ].{1,30}" placeholder="მუმლაძე" type="text" id="surnameIn" onkeyup="surnamefunction()"/></div>
       <div class="Hint1">მინიმუმ 2 ასო, ქართული ასოები</div>
     </div>
                 <!--  -->
     <div class="photo">პირადი ფოტოს ატვირთვა</div>
-    <button id="PhotoUpload">ატვირთვა</button>
+    <!-- <button id="PhotoUpload" >ატვირთვა</button> -->
+    <label class="PhotoUpload" for="image_input"> ატვირთვა</label>
+    <input placeholder=""  id="image_input" type="file" accept="image/jpeg, image/png, image/jpg" style="visibility: hidden;">
+    <!-- <div id="display_image"></div> -->
                 <!--  -->
     <div id="aboutMe">
       <div id="pepe">ჩემ შესახებ (არასავალდებულო)</div>
-      <textarea type="text" id="l77013"></textarea>
+      <textarea placeholder="ზოგადი ინფო შენ შესახებ" type="text" id="l77013" onkeyup="aboutfunction()"></textarea>
     </div>
     <div id="InputEmail">
       <div class="saxeli">ელ.ფოსტა</div>
-      <div><input type="text" id="EmailIn"/></div>
+      <div><input pattern="[a-zA-Z0-9._%+-]+@redberry.ge" placeholder="anzorr666@redberry.ge" type="text" id="EmailIn" onkeyup="emailfunction()"/></div>
       <div class="Hint">უნდა მთავრდებოდეს @redberry.ge-ით</div>
     </div>
     <div id="InputNumber">
       <div class="saxeli">მობილურის ნომერი</div>
-      <div><input type="text" id="NumberIn"/></div>
+      <div><input placeholder="+995 551 12 34 56" pattern="[+]{1}[9]{2}[5]{1} [5]{1}[0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}" type="text" id="NumberIn" onkeyup="phonefunction()"/></div>
       <div class="Hint">უნდა აკმაყოფილებდეს ქართული მობილურის ნომრის ფორმატს</div>
     </div>
-    <button id="button2">შემდეგი</button>
+    <!-- <button id="button2" onclick="ValidateEmail()" >შემდეგი</button> -->
+    <button id="button2" onclick="Validate()" type="button" >შემდეგი</button>
+    <script src="Reg1reg.js"></script>
+    <script src="Temorary.js"></script>
   </body>
-  <script>
-  </script>
+
   
 </html>

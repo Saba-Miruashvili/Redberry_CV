@@ -160,6 +160,27 @@ input[type=text] {
         align-self: stretch;
         flex-grow: 0;
     }
+    #surnameIn{
+        /* Frame 133 */
+
+
+        box-sizing: border-box;
+
+        width: 371px;
+        height: 48px;
+
+        background: #FFFFFF;
+        border: 1px solid #BCBCBC;
+        border-radius: 4px;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 1;
+        align-self: stretch;
+        flex-grow: 0;
+    }
+
     
     .Hint1{
         /* width: 371px;
@@ -223,17 +244,17 @@ input[type=text] {
 
     }
 
-    #PhotoUpload{
+    .PhotoUpload{
         /* Frame 151 */
 
 
         /* Auto layout */
-
+        
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        padding: 10px 10px 12px;
+        /* padding: 10px 10px 12px; */
         gap: 10px;
 
         position: absolute;
@@ -247,6 +268,7 @@ input[type=text] {
         color: white;
         cursor: pointer;
         border-style: none;
+        
     }
 
 
@@ -534,4 +556,248 @@ top: 558px;
     top: 994px;
 
     /* background: url(LOGO-12.png); */
+}
+
+
+#nameOut{
+    /* ᲐᲜᲖᲝᲠ */
+
+
+    position: absolute;
+    width: 350px;
+    height: 42px;
+    left: 80px;
+    top: 68px;
+
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 42px;
+    /* identical to box height */
+
+
+    color: #F93B1D;
+}
+
+#surnameOut{
+    position: absolute;
+    width: 145px;
+    height: 42px;
+    left: 223px;
+    top: 68px;
+
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 42px;
+    /* identical to box height */
+
+
+    color: #F93B1D;
+
+}
+
+#display_image{
+    /* Rectangle 9 */
+
+
+    position: absolute;
+    width: 246px;
+    height: 246px;
+    left: 501px;
+    top: 48px;
+    background-size: cover;
+
+    /* background: url(.jpg), #D9D9D9; */
+    border-radius: 133px;
+}
+
+#emailOut{
+    /* anzorr666@redberry.ge */
+    position: absolute;
+    width: 187px;
+    height: 21px;
+    left: 111px;
+    top: 127px;
+
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+
+    /* off black */
+
+    color: #1A1A1A;
+
+}
+
+#NumberOut{
+    /* +995 597 63 45 16 */
+
+
+    position: absolute;
+    width: 151px;
+    height: 21px;
+    left: 111px;
+    top: 158px;
+
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+
+    /* off black */
+
+    color: #1A1A1A;
+
+}
+
+#dog{
+    height: 16.666664123535156px;
+    width: 16.666664123535156px;
+    left: 1.6666259765625px;
+    top: 1.66650390625px;
+    border-radius: 0px;
+}
+#dogHolder{
+        position: absolute;
+    left: 80px;
+    right: 8.33%;
+    top: 130px;
+    bottom: 8.33%;
+    /* background: #898989; */
+}
+
+#phoneHolder{
+    position: absolute;
+    left: 80px;
+    right: 9.04%;
+    top: 158px;
+    bottom: 7.77%;
+}
+
+#phone{
+    height: 16.641902923583984px;
+    width: 16.63849449157715px;
+    left: 1.5535888671875px;
+    /* top: 1.8046875px; */
+    border-radius: 0px;
+}
+
+#l77013Out{
+    position: absolute;
+    width: 432px;
+    height: 72px;
+    left: 80px;
+    top: 250px;
+
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    /* or 138% */
+
+    text-transform: lowercase;
+    word-wrap: break-word;
+
+    color: #000000;
+}
+
+#About{
+    /* ᲩᲔᲛ ᲨᲔᲡᲐᲮᲔᲑ */
+    position: absolute;
+    width: 118px;
+    height: 22px;
+    left: 80px;
+    top: 213px;
+
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+    color: #F93B1D;
+}
+
+
+#NumberIn:invalid{
+    border-color: #ef5050;
+    background: url("image/stop.png") no-repeat;
+    background-position: 762px;
+    background-size: 18px;
+}
+#NumberIn:valid{
+    border-color: #98e37e;
+    background: url("image/green.png") no-repeat;
+    background-position: 762px;
+    background-size: 18px;
+    border-radius: 8px;
+}
+#NumberIn:placeholder-shown {
+    border-color: #bcbcbc;
+    background: none;
+  }
+
+#EmailIn:invalid{
+    border-color: #ef5050;
+    background: url("image/stop.png") no-repeat;
+    background-position: 762px;
+    background-size: 18px;
+    
+    
+}
+#EmailIn:valid{
+    border-color: #98e37e;
+    background: url("image/green.png") no-repeat;
+    background-position: 762px;
+    background-size: 18px;
+    border-radius: 8px;
+}
+#EmailIn:placeholder-shown {
+    border-color: #bcbcbc;
+    background: none;
+  }
+
+#nameIn:invalid{
+    border-color: #ef5050;
+}
+#nameIn:valid{
+    border-color: #98e37e;
+    background: url("image/green.png") no-repeat;
+    background-position: 340px;
+    background-size: 18px;
+    border-radius: 8px;
+}
+#nameIn:placeholder-shown {
+    border-color: #bcbcbc;
+    background: none;
+  }
+
+  #surnameIn:invalid{
+    border-color: #ef5050;
+}
+#surnameIn:valid{
+    border-color: #98e37e;
+    background: url("image/green.png") no-repeat;
+    background-position: 340px;
+    background-size: 18px;
+    border-radius: 8px;
+}
+#surnameIn:placeholder-shown {
+    border-color: #bcbcbc;
+    background: none;
+  }
+
+  #l77013:placeholder-shown{
+    border-color: #bcbcbc;
+    
+  }
+  #l77013:valid{
+    border-color: #98e37e;
 }
