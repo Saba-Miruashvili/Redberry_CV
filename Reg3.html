@@ -4,14 +4,14 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="Reg2.css" />
+    <link rel="stylesheet" href="Reg3.css" />
     <!-- <script src="Reg1reg.js"></script> -->
     <title>Reg1</title>
   </head> 
   <body>
     <a href="Welcome.html"><div id="ellipse" ><img src="image/back.png"></div></a>
-    <div id="PersonalInfo"> ᲒᲐᲛᲝᲪᲓᲘᲚᲔᲑᲐ</div>
-    <div id="firstPage">2/3</div>
+    <div id="PersonalInfo"> ᲒᲐᲜᲐᲗᲚᲔᲑᲐ</div>
+    <div id="firstPage">3/3</div>
     <div id="line"></div>
 <!-- ////Output////// -->
 <div id="Right">
@@ -23,6 +23,8 @@
   <div id="About">ᲩᲔᲛ ᲨᲔᲡᲐᲮᲔᲑ</div>
   <div id="l77013Out"></div>
   <!-- ///Out2put/// -->
+
+
 <div id="Right-grid">
     <div class="PDD">
       <div class="Satauri">ᲒᲐᲛᲝᲪᲓᲘᲚᲔᲑᲐ</div>
@@ -33,41 +35,53 @@
       <div class="Description-Out"> </div>
       <div class="Line-under"></div>
     </div>
+      
+</div>
+    <div class="PDD">
+      <div class="Degree_Out"></div>
+      <div class="date-finish-Out"></div>
+      <div class="info_Out"></div>
     </div>
 </div> 
 
 <!-- input for  EXP-->
 <div class="EXP-grid">
-    <div id="position-holder">
-        <div class="saxeli">თანამდებობა</div>
-        <div><input placeholder="დეველოპერი, დიზაინერი, ა.შ." type="text" class="position-In" onkeyup="PAE(0)" /></div>
+    <div id="learn-holder">
+        <div class="saxeli">სასწავლებელი</div>
+        <div><input class="learn-In" placeholder="სასწავლებელი" type="text"   /></div>
         <div class="Hint1">მინიმუმ 2 ასო, ქართული ასოები</div>
     </div>
-    <div id="employer-holder">
-        <div class="saxeli">დამსაქმებელი</div>
-        <div><input placeholder="დამსაქმებელი" type="text" class="employer-In" onkeyup="PAE(0)" /></div>
-        <div class="Hint1">მინიმუმ 2 ასო, ქართული ასოები</div>
-    </div>
+
+
+
     <div id="date">
-          <div id="date-flex1">
-            <div class="saxeli">დაწყების რიცხვი</div> <input class="date-start" type="date" onchange="Datefunction(0)" />
-          </div>
+        <div id="date-flex1">
+          <div class="saxeli">ხარისხი</div>
+          <select class="Select-form"  onchange=""> 
+            <option value="l78055">please select</option>
+            
+          </select>
+        </div>
           <div id="date-flex2">
-            <div class="saxeli">დამთავრების რიცხვი</div> <input class="date-end" type="date" onchange="Datefunction(0)" />
+            <div class="saxeli">დამთავრების რიცხვი</div>
+            <input class="date-finish" type="date" onchange="" />
           </div>
     </div>
     
     <div id="Description">
         <div class="saxeli">აღწერა</div>
-        <div><textarea placeholder="როლი თანამდებობაზე და ზოგადი აღწერა" class="Description-In" type="text" onkeyup="Descriptionfunction(0)" ></textarea></div>
+        <div><textarea placeholder="განათლების აღწერა" class="info-In" type="text" onkeyup="" ></textarea></div>
     </div>
     <div id="line2"></div>
 </div>
 
 <div><button id="Add" onclick="repeat()">მეტი გამოცდილების დამატება </button>
-<a href="Reg1.html"><button id="back-page" onclick="">BACK </button></a>
-<a href="Reg3.html"><button id="next-page" onclick="">NEXT </button></a>
+<a href="Reg2.html"><button id="back-page" onclick="">BACK </button></a>
+<!-- <a href="Reg3.html"><button id="next-page" onclick="">NEXT </button></a> -->
 </div>
-<div class="johnCena"></div>
-    <script src="Reg2.js"></script>
-  </body>
+<!-- <div class="johnCena"></div> -->
+
+
+
+    <script src="Reg3.js"></script>
+  </body> 

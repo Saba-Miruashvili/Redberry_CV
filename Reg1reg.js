@@ -3,6 +3,20 @@ function namefunction(){
     document.getElementById("nameOut").innerHTML = x + " " + document.getElementById("surnameIn").value;
     // console.log(x);
     localStorage.setItem("Name",document.getElementById('nameIn').value);
+    var regx = /[ა-ჰ]/;
+    var Name = document.getElementById("nameIn").value;
+    
+    if( regx.test(Name) === false ||  Name.length<2){
+        // alert('Youre an ivnalid');
+        document.getElementById("nameIn").style.borderColor = "red";
+        document.getElementsByClassName("saxeli")[0].style.color = "red";
+
+        return false;
+     }else{
+        document.getElementById("nameIn").style.borderColor = "green";
+        document.getElementsByClassName("saxeli")[0].style.color = "black";
+     }
+       
 }
 
 function surnamefunction(){
@@ -10,6 +24,20 @@ function surnamefunction(){
     document.getElementById("nameOut").innerHTML = document.getElementById("nameIn").value + " " + x;
     // console.log(x);
     localStorage.setItem("Surname",document.getElementById('surnameIn').value);
+
+    var regx = /[ა-ჰ]/;
+    var Name = document.getElementById("surnameIn").value;
+    
+    if( regx.test(Name) === false ||  Name.length<2){
+        // alert('Youre an ivnalid');
+        document.getElementById("surnameIn").style.borderColor = "red";
+        document.getElementsByClassName("saxeli")[1].style.color = "red";
+
+        return false;
+     }else{
+        document.getElementById("surnameIn").style.borderColor = "green";
+        document.getElementsByClassName("saxeli")[1].style.color = "black";
+     }
 }
 
 function emailfunction(){
@@ -17,6 +45,28 @@ function emailfunction(){
     document.getElementById("emailOut").innerHTML =  x;
     localStorage.setItem("email",document.getElementById('EmailIn').value);
     // console.log(x);
+    var regx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@redberry.ge$/gm;
+    var mail = document.getElementById("EmailIn").value;
+    
+    if(mail == ""){
+      document.getElementById("dog").style.visibility = "hidden";
+    }else{
+      document.getElementById("dog").style.visibility = "visible";
+    }
+
+    if( regx.test(mail) === false ){
+      //   alert('Youre an ivnalid');
+      //   alert(mail)
+        document.getElementById("EmailIn").style.borderColor = "red";
+        document.getElementsByClassName("saxeli")[2].style.color = "red";
+      //   console.log(document.getElementsByClassName("saxeli"))
+        return false;
+        // document.querySelector('#button2').disabled = true;
+     }
+     else{
+        document.getElementById("EmailIn").style.borderColor = "green";
+        document.getElementsByClassName("saxeli")[2].style.color = "black";
+     }
 }
 
 function phonefunction(){
@@ -24,6 +74,22 @@ function phonefunction(){
     document.getElementById("NumberOut").innerHTML =  x;
     localStorage.setItem("phone",document.getElementById('NumberIn').value);
     // console.log(x);
+    var regx =  /^\+995\s5\d{2}\s\d{2}\s\d{2}\s\d{2}$/;
+    var phone = document.getElementById("NumberIn").value;
+
+    if(phone == ""){
+      document.getElementById("phone").style.visibility = "hidden";
+    }else{
+      document.getElementById("phone").style.visibility = "visible";
+    }
+    
+    if( regx.test(phone) === false ){
+        // alert('You are an ivnalid');
+        document.getElementById("NumberIn").style.borderColor = "red";
+        document.getElementsByClassName("saxeli")[3].style.color = "red";
+        return false;
+     }else{document.getElementById("NumberIn").style.borderColor = "green";
+        document.getElementsByClassName("saxeli")[3].style.color = "black";}
 }
 
 function aboutfunction(){
@@ -69,6 +135,9 @@ function aboutfunction(){
     // }
     function ValidateEmail()
       {
+        var x=document.getElementById("EmailIn").value;
+        document.getElementById("emailOut").innerHTML =  x;
+        localStorage.setItem("email",document.getElementById('EmailIn').value);
       //var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
       var regx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@redberry.ge$/gm;
       var mail = document.getElementById("EmailIn").value;
@@ -78,13 +147,16 @@ function aboutfunction(){
         //   alert(mail)
           document.getElementById("EmailIn").style.borderColor = "red";
           document.getElementsByClassName("saxeli")[2].style.color = "red";
+          document.getElementsByClassName("stop")[2].style.visibility = "visible";
         //   console.log(document.getElementsByClassName("saxeli"))
           return false;
           // document.querySelector('#button2').disabled = true;
        }
        else{
-        // document.querySelector("#button2").onclick = function () {
-        location.href = "Welcome.html";
+        document.getElementsByClassName("stop")[2].style.visibility = "hidden";
+        document.getElementById("EmailIn").style.borderColor = "green";
+        document.getElementsByClassName("saxeli")[2].style.color = "black";
+        return true
         
        }
       
@@ -92,43 +164,79 @@ function aboutfunction(){
 
       function ValidatePhone()
       {
-      
+      var x=document.getElementById("NumberIn").value;
+      document.getElementById("NumberOut").innerHTML =  x;
+      localStorage.setItem("phone",document.getElementById('NumberIn').value);
       var regx =  /^\+995\s5\d{2}\s\d{2}\s\d{2}\s\d{2}$/;
       var phone = document.getElementById("NumberIn").value;
       
       if( regx.test(phone) === false ){
-          alert('You are an ivnalid');
+        //   alert('You are an ivnalid');
+        document.getElementById("NumberIn").style.borderColor = "red";
+        document.getElementsByClassName("saxeli")[3].style.color = "red";
+        document.getElementsByClassName("stop")[3].style.visibility = "visible";
           return false;
-       }else{location.href = "Welcome.html";}
+       }else{
+        document.getElementsByClassName("stop")[3].style.visibility = "hidden";
+        document.getElementById("NumberIn").style.borderColor = "green";
+        document.getElementsByClassName("saxeli")[3].style.color = "black";
+        return true
+        }
     }
     
     function ValidateName()
       {
-      
+        
+      var x=document.getElementById("nameIn").value;
+      document.getElementById("nameOut").innerHTML = x + " " + document.getElementById("surnameIn").value;
+      // console.log(x);
+      localStorage.setItem("Name",document.getElementById('nameIn').value);
       var regx = /[ა-ჰ]/;
       var Name = document.getElementById("nameIn").value;
       
       if( regx.test(Name) === false ||  Name.length<2){
-          alert('Youre an ivnalid');
+        //   alert('Youre an ivnalid');
+        document.getElementById("nameIn").style.borderColor = "red";
+        document.getElementsByClassName("saxeli")[0].style.color = "red";
+        document.getElementsByClassName("stop")[0].style.visibility = "visible"
+        // console.log("WRYYYYYYYYYYYYY");
+        
           return false;
        }else{
-        location.href = "Welcome.html";
+        document.getElementsByClassName("stop")[0].style.visibility = "hidden";
+        document.getElementById("nameIn").style.borderColor = "green";
+        document.getElementsByClassName("saxeli")[0].style.color = "black";
+        return true
        }
     }
 
     function ValidateSurName()
       {
+      var x=document.getElementById("surnameIn").value;
+      document.getElementById("nameOut").innerHTML = document.getElementById("nameIn").value + " " + x;
+      // console.log(x);
+      localStorage.setItem("Surname",document.getElementById('surnameIn').value);
       
       var regx = /[ა-ჰ]/;
       var surname = document.getElementById("surnameIn").value;
       
       if( regx.test(surname) === false ||  surname.length<2){
-          alert('Youre an ivnalid');
+        //   alert('Youre an ivnalid');
+        document.getElementById("surnameIn").style.borderColor = "red";
+        document.getElementsByClassName("saxeli")[1].style.color = "red";
+        document.getElementsByClassName("stop")[1].style.visibility = "visible";
+        
           return false;
        }else{
-        location.href = "Welcome.html";
+        document.getElementsByClassName("stop")[1].style.visibility = "hidden";
+        document.getElementById("surnameIn").style.borderColor = "green";
+        document.getElementsByClassName("saxeli")[1].style.color = "black";
+        return true
        }
     }
+
+ 
+
 
 
 document.getElementById("display_image").style.backgroundImage=localStorage.getItem("Image")
@@ -148,3 +256,15 @@ document.getElementById("l77013").value = localStorage.getItem("AboutMe")
 document.getElementById("l77013Out").innerHTML = localStorage.getItem("AboutMe")
 
 // localStorage.setItem("Name",document.getElementById('nameIn').value);
+
+
+  function Validate(){
+    if(
+      ValidateSurName() == true &&
+      ValidateName() == true &&
+      ValidatePhone() == true &&
+      ValidateEmail() == true){
+        location.href = "Reg2.html";
+      }
+    }
+

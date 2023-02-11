@@ -617,7 +617,7 @@ top: 558px;
 #emailOut{
     /* anzorr666@redberry.ge */
     position: absolute;
-    width: 187px;
+    width: 250px;
     height: 21px;
     left: 111px;
     top: 127px;
@@ -728,7 +728,7 @@ top: 558px;
 
 #NumberIn:invalid{
     border-color: #ef5050;
-    background: url("image/stop.png") no-repeat;
+    /* background: url("image/stop.png") no-repeat; */
     background-position: 762px;
     background-size: 18px;
 }
@@ -746,7 +746,7 @@ top: 558px;
 
 #EmailIn:invalid{
     border-color: #ef5050;
-    background: url("image/stop.png") no-repeat;
+    /* background: url("image/stop.png") no-repeat; */
     background-position: 762px;
     background-size: 18px;
     
@@ -800,4 +800,16 @@ top: 558px;
   }
   #l77013:valid{
     border-color: #98e37e;
+}
+
+
+img{
+    width: 21px;
+    height: 18.75px;
+    padding-left: 10px;
+    
+}
+
+.stop{
+    visibility: hidden;
 }

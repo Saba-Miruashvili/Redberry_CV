@@ -4,6 +4,11 @@ document.getElementById("nameOut").innerHTML = localStorage.getItem("Name") + " 
 document.getElementById("emailOut").innerHTML = localStorage.getItem("email")
 document.getElementById("l77013Out").innerHTML = localStorage.getItem("AboutMe")
 
+
+
+
+
+
 var geralt = 0;
 
 let Eposition = [];
@@ -24,7 +29,7 @@ let SEDescription = [];
 SEposition = JSON.parse(localStorage.getItem("Eposition"));
 SEemployer = JSON.parse(localStorage.getItem("Eemployer"));
 SEdateStart = JSON.parse(localStorage.getItem("EdateStart"));
-SEdateEnd = JSON.parse(localStorage.getItem("EdateStart"));
+SEdateEnd = JSON.parse(localStorage.getItem("EdateEnd"));
 SEDescription = JSON.parse(localStorage.getItem("EDescription"));
 
 // console.log(SEposition);
@@ -33,12 +38,30 @@ SEDescription = JSON.parse(localStorage.getItem("EDescription"));
 // document.getElementsByClassName("position-In")[0].value = Eposition[0];
 
 
-for(let i = 0; i < SEposition.length; i++){
-    if(SEposition[i] == "" || SEposition[i] == null){
+let Maximus 
+Maximus = Math.max(SEposition.length, SEemployer.length,  SEDescription.length); 
+
+for(let i = 0; i < Maximus; i++){
+    Maximus = Math.max(SEposition.length, SEemployer.length,SEDescription.length); 
+    if(
+    (SEposition[i] == "" || SEposition[i] == null || SEposition[i] == undefined)
+    &&(SEemployer[i] == "" || SEemployer[i] == null || SEemployer[i] == undefined)
+    &&(SEdateStart[i] == "" || SEdateStart[i] == null || SEdateStart[i] == undefined)
+    &&(SEdateEnd[i] == "" || SEdateEnd[i] == null || SEdateEnd[i] == undefined)
+    &&(SEDescription[i] == "" || SEDescription[i] == null || SEDescription[i] == undefined)
+    )
+    
+    {
         SEposition.splice(i,1);
+        SEemployer.splice(i,1);
+        SEdateStart.splice(i,1);
+        SEdateEnd.splice(i,1);
+        SEDescription.splice(i,1);
         i--;
-        
+
     }
+
+
 }
 
 
@@ -65,14 +88,19 @@ for(let i = 0; i < SEposition.length; i++){
     document.getElementsByClassName("employer-In")[i].value = Eemployer[i];
     document.getElementsByClassName("date-start")[i].value = EdateStart[i];
     document.getElementsByClassName("date-end")[i].value = EdateEnd[i];
-    document.getElementsByClassName("Description-In")[i].value = EDescription[i];
+    document.getElementsByClassName("Description-In")[i].value = SEDescription[i];
+
+
+    document.getElementsByClassName('position-Out')[i].innerHTML = SEposition[i] + " " + SEemployer[i];
+    document.getElementsByClassName('date-out')[i].innerHTML = SEdateStart[i] + " " + SEdateEnd[i];
+    document.getElementsByClassName('Description-Out')[i].innerHTML = SEDescription[i];
 }
 
 
 
 
 
-// console.log(SEposition);
+console.log(SEposition);
 
 
 
@@ -160,6 +188,7 @@ function repeat(){
     <div class="position-Out"></div>
     <div class="date-out"></div>
     <div class="Description-Out"> </div>
+    <div class="Line-under"></div>
     </div>
     `
     
@@ -168,8 +197,17 @@ function repeat(){
         document.getElementsByClassName('employer-In')[dio].value=Eemployer[dio];
         document.getElementsByClassName('date-start')[dio].value=EdateStart[dio];
         document.getElementsByClassName('date-end')[dio].value=EdateEnd[dio];
+        // document.getElementsByClassName('date-out')[dio].innerHTML= SEdateStart[dio] + " " + SEdateEnd[dio];
         document.getElementsByClassName('Description-In')[dio].value=EDescription[dio];
        }
+    for(let dio=0;dio<document.getElementsByClassName('position-In').length-1;dio++){
+        document.getElementsByClassName('position-Out')[dio].value= SEposition[dio];
 
+        document.getElementsByClassName('date-out')[dio].value= SEdateStart[dio] + " " + SEdateEnd[dio];
+        
+        // document.getElementsByClassName('date-start-out')[dio].value= SEdateStart[dio];
+        // document.getElementsByClassName('date-end-out')[dio].value= SEdateStart[dio];
+        document.getElementsByClassName('Description-Out')[dio].value = SEDescription[dio];
+       }
 }
 
