@@ -279,5 +279,5 @@ function ValidateDate1(a){
 
 function EraseAll(){
     localStorage.clear();
-    location.href="Welcome.html";
+    location.href="index.html";
 }

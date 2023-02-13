@@ -204,7 +204,7 @@ function aboutfunction(){
   }
     
     function ValidateName()
-      {
+    {
         
       var x=document.getElementById("nameIn").value;
       document.getElementById("nameOut").innerHTML = x + " " + document.getElementById("surnameIn").value;
@@ -227,7 +227,19 @@ function aboutfunction(){
         document.getElementsByClassName("saxeli")[0].style.color = "black";
         return true
        }
+
+      
     }
+    function ValidateName2(){
+      var Name = document.getElementById("nameIn").value;
+      if(Name == ""){
+        document.getElementById("email-Out").style.visibility = "hidden";
+      }else{
+        document.getElementById("email-Out").style.visibility = "visible";
+      }
+      
+    }
+
 
     function ValidateSurName()
       {
@@ -299,5 +311,5 @@ document.getElementById("l77013Out").innerHTML = localStorage.getItem("AboutMe")
 
     function EraseAll(){
       localStorage.clear();
-      location.href="Welcome.html";
+      location.href="index.html";
   }

@@ -334,5 +334,5 @@ for(let i = 0; i < ESlearnIn.length - 1; i++){
 
     function EraseAll(){
         localStorage.clear();
-        location.href="Welcome.html";
+        location.href="index.html";
     }

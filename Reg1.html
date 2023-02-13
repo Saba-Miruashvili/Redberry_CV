@@ -9,7 +9,7 @@
     <title>Reg1</title>
   </head> 
   <body>
-    <a href="Welcome.html" onclick ="EraseAll()"><div id="ellipse" ><img src="image/back.png"></div></a>
+    <a onclick ="EraseAll()"><div id="ellipse" ><img src="image/back.png"></div></a>
     <div id="PersonalInfo"> ᲞᲘᲠᲐᲓᲘ ᲘᲜᲤᲝ</div>
     <div id="firstPage">1/3</div>
     <div id="line"></div>
@@ -29,7 +29,7 @@
 <!-- ////Inputs//////  -->
     <div class="name">
       <div class="saxeli">სახელი</div>
-      <div><input pattern="[ა-ჰ].{1,30}" placeholder="ანზორ" type="text" id="nameIn" onkeyup="ValidateName()"/><img class="stop" src="image/stop.png" alt=""></div>
+      <div><input pattern="[ა-ჰ].{1,30}" placeholder="ანზორ" type="text" id="nameIn" onkeyup="ValidateName();ValidateName2()"/><img class="stop" src="image/stop.png" alt=""></div>
       <div class="Hint1">მინიმუმ 2 ასო, ქართული ასოები</div>
        
     </div>
