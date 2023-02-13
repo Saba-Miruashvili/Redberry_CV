@@ -65,11 +65,11 @@ for(let i = 0; i < Maximus; i++){
 }
 
 
-localStorage.setItem("Eposition", JSON.stringify(SEposition));
-localStorage.setItem("Eemployer", JSON.stringify(SEemployer));
-localStorage.setItem("EdateStart", JSON.stringify(SEdateStart)); 
-localStorage.setItem("EdateEnd", JSON.stringify(SEdateEnd));
-localStorage.setItem("EDescription", JSON.stringify(SEDescription));
+// localStorage.setItem("Eposition", JSON.stringify(SEposition));
+// localStorage.setItem("Eemployer", JSON.stringify(SEemployer));
+// localStorage.setItem("EdateStart", JSON.stringify(SEdateStart)); 
+// localStorage.setItem("EdateEnd", JSON.stringify(SEdateEnd));
+// localStorage.setItem("EDescription", JSON.stringify(SEDescription));
 
 
 for(let i = 0; i < SEposition.length -1; i++){
@@ -159,12 +159,12 @@ function repeat(){
     document.getElementsByClassName("EXP-grid")[0].innerHTML+= `
     <div id="position-holder">
     <div class="saxeli">თანამდებობა</div>
-    <div><input placeholder="დეველოპერი, დიზაინერი, ა.შ." type="text" class="position-In" onkeyup="PAE(${(geralt)})" /></div>
+    <div><input placeholder="დეველოპერი, დიზაინერი, ა.შ." type="text" class="position-In" onkeyup="PAE(${(geralt)});ValidateName(${(geralt)})" /></div>
     <div class="Hint1">მინიმუმ 2 ასო, ქართული ასოები</div>
 </div>
 <div id="employer-holder">
     <div class="saxeli">დამსაქმებელი</div>
-    <div><input placeholder="დამსაქმებელი" type="text" class="employer-In" onkeyup="PAE(${(geralt)})" /></div>
+    <div><input placeholder="დამსაქმებელი" type="text" class="employer-In" onkeyup="PAE(${(geralt)});ValidateEmp(${(geralt)})" /></div>
     <div class="Hint1">მინიმუმ 2 ასო, ქართული ასოები</div>
 </div>
 <div id="date">
@@ -182,14 +182,14 @@ function repeat(){
 </div>
 <div id="line2"></div>`;
     
-    document.getElementById("Right-grid").innerHTML+= `
-    <div class="PDD">
+    document.getElementsByClassName("PDD")[0].innerHTML+= `
+
     <div class="Satauri">ᲒᲐᲛᲝᲪᲓᲘᲚᲔᲑᲐ </div>
     <div class="position-Out"></div>
     <div class="date-out"></div>
     <div class="Description-Out"> </div>
     <div class="Line-under"></div>
-    </div>
+
     `
     
     for(let dio=0;dio<document.getElementsByClassName('position-In').length-1;dio++){
@@ -211,3 +211,73 @@ function repeat(){
        }
 }
 
+function ValidateName(a){
+
+var Name = document.getElementsByClassName("position-In")[a].value;
+//  console.log("a")
+
+if(Name.length<2){
+  //   alert('Youre an ivnalid');
+  document.getElementsByClassName("position-In")[a].style.borderColor = "red";
+  document.getElementsByClassName("saxeli")[a].style.color = "red";
+  // document.getElementsByClassName("stop")[0].style.visibility = "visible"
+  // console.log("WRYYYYYYYYYYYYY");
+    return false;
+ }else{
+  // document.getElementsByClassName("stop")[0].style.visibility = "hidden";
+  document.getElementsByClassName("position-In")[a].style.borderColor = "green";
+  document.getElementsByClassName("saxeli")[a].style.color = "black";
+  return true
+  
+ }
+}
+function ValidateEmp(a){
+
+    var Name = document.getElementsByClassName("employer-In")[a].value;
+    //  console.log("a")
+    
+    if(Name.length<2){
+      //   alert('Youre an ivnalid');
+      document.getElementsByClassName("employer-In")[a].style.borderColor = "red";
+      document.getElementsByClassName("saxeli")[a].style.color = "red";
+      // document.getElementsByClassName("stop")[0].style.visibility = "visible"
+      // console.log("WRYYYYYYYYYYYYY");
+        return false;
+     }else{
+      // document.getElementsByClassName("stop")[0].style.visibility = "hidden";
+      document.getElementsByClassName("employer-In")[a].style.borderColor = "green";
+      document.getElementsByClassName("saxeli")[a].style.color = "black";
+      return true
+      
+     }
+    }
+
+
+function ValidateDate(a){
+    if(getElementsByClassName("date-start")[a].value == ""){
+        document.getElementsByClassName("date-start")[a].style.borderColor = "red";
+        document.getElementsByClassName("saxeli")[a].style.color = "red";
+        return false;
+    }else{
+        document.getElementsByClassName("date-start")[a].style.borderColor = "green";
+        document.getElementsByClassName("saxeli")[a].style.color = "black";
+        return true;
+    }
+}
+
+function ValidateDate1(a){
+    if(getElementsByClassName("date-end")[a].value == ""){
+        document.getElementsByClassName("date-end")[a].style.borderColor = "red";
+        document.getElementsByClassName("saxeli")[a].style.color = "red";
+        return false;
+    }else{
+        document.getElementsByClassName("date-end")[a].style.borderColor = "green";
+        document.getElementsByClassName("saxeli")[a].style.color = "black";
+        return true;
+    }
+}
+
+function EraseAll(){
+    localStorage.clear();
+    location.href="Welcome.html";
+}

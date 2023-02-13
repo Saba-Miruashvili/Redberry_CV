@@ -662,6 +662,7 @@ top: 558px;
     left: 1.6666259765625px;
     top: 1.66650390625px;
     border-radius: 0px;
+    visibility: hidden;
 }
 #dogHolder{
         position: absolute;
@@ -686,6 +687,7 @@ top: 558px;
     left: 1.5535888671875px;
     /* top: 1.8046875px; */
     border-radius: 0px;
+    visibility: hidden;
 }
 
 #l77013Out{

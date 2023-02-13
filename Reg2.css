@@ -10,6 +10,7 @@ textarea{
     font-weight: 400;
     font-size: 16px;
     line-height: 21px;
+    /* word-break: break-all; */
   }
 
 
@@ -149,14 +150,12 @@ input{
     border-radius: 133px;
 }
 #imageStar{
-    
-    position: absolute;
     width: 42px;
     height: 42px;
     left: 78px;
     top: 994px;
-
     /* background: url(LOGO-12.png); */
+    margin-top: 40px;
 }
 
 #emailOut{
@@ -625,10 +624,11 @@ flex-grow: 0;
 
 
         /* position: relative; */
+        margin-top: 10px;
         width: 178px;
         height: 20px;
-        left: 80px;
-        top: 402px;
+        /* left: 80px;
+        top: 402px; */
 
         font-family: 'Helvetica Neue';
         font-style: normal;
@@ -682,6 +682,7 @@ flex-grow: 0;
     .date-out{
         
         /* position: relative; */
+        margin-top: 7px;
         width: 183px;
         /* height: 19px; */
         left: 80px;
@@ -704,6 +705,7 @@ flex-grow: 0;
         top: 464px;
         word-break: break-all;
         padding-bottom: 20px;
+        margin-top: 16px;
 
         font-family: 'Helvetica Neue';
         font-style: normal;
@@ -720,25 +722,30 @@ flex-grow: 0;
 
     .PDD{
         display: grid;
-        /* grid-template-columns: auto; */
-        /* position: relative; */
-        /* top:360px;
-        left: 80px;
-        width:658px;
-        margin:0%; */
+        grid-template-columns: auto;
+        position: relative;
+        /* top:360px; */
+        /* padding-left: 80px; */
+        /* left: 80px; */
+        /* width:658px; */
+
+        /* gap: 30px; */
+        width: 742px;
+        margin:0%;
+        height: fit-content;
+        background-color: white;
         
     }
-
 
     .Satauri{
         /* ᲒᲐᲛᲝᲪᲓᲘᲚᲔᲑᲐ */
 
-
+        margin-top: 20px;
         /* position: relative; */
         width: 143px;
         height: 22px;
-        left: 80px;
-        top: 365px;
+        /* left: 80px; */
+        /* top: 365px; */
 
         font-family: 'Helvetica Neue';
         font-style: normal;
@@ -794,3 +801,4 @@ flex-grow: 0;
 
     border: 1px solid #C8C8C8;
     }
+

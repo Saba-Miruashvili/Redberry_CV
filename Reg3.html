@@ -17,7 +17,7 @@
 <div id="Right">
   <div id="nameOut"></div>
   <div id="display_image"></div>
-  <img  id="imageStar" src="image/bottomright.png" alt="RedStar">
+  <!-- <img  id="imageStar" src="image/bottomright.png" alt="RedStar"> -->
   <div id="dogHolder"><img id="dog" src="image/dogtail.png"> </div> <div id="emailOut"></div>
   <div id="phoneHolder"><img id="phone" src="image/phone.png"> </div> <div id="NumberOut"></div>
   <div id="About">ᲩᲔᲛ ᲨᲔᲡᲐᲮᲔᲑ</div>
@@ -25,30 +25,34 @@
   <!-- ///Out2put/// -->
 
 
-<div id="Right-grid">
-    <div class="PDD">
-      <div class="Satauri">ᲒᲐᲛᲝᲪᲓᲘᲚᲔᲑᲐ</div>
-      <div class="position-Out"></div>
-      <div class="date-out"></div>
-      <div class="date-start-out"></div>
-      <div class="date-end-out"></div>
-      <div class="Description-Out"> </div>
-      <div class="Line-under"></div>
-    </div>
-      
+  <div id="Right-grid">
+      <div class="PDD">
+        <div class="Satauri">ᲒᲐᲛᲝᲪᲓᲘᲚᲔᲑᲐ</div>
+        <div class="position-Out"></div>
+        <div class="date-out"></div>
+        <div class="Description-Out"> </div>
+        <div class="Line-under"></div>
+
+
+      </div> 
+
+        <div class="PDD_under">
+          <div class="Satauri">ᲒᲐᲜᲐᲗᲚᲔᲑᲐ</div>
+          <div class="Degree_Out"></div>
+          <div class="date-finish-Out"></div>
+          <div class="info_Out"></div>
+          <div class="Line-under"></div>
+        </div>
+        <img  id="imageStar" src="image/bottomright.png" alt="RedStar">
+  </div> 
+    
 </div>
-    <div class="PDD">
-      <div class="Degree_Out"></div>
-      <div class="date-finish-Out"></div>
-      <div class="info_Out"></div>
-    </div>
-</div> 
 
 <!-- input for  EXP-->
 <div class="EXP-grid">
     <div id="learn-holder">
         <div class="saxeli">სასწავლებელი</div>
-        <div><input class="learn-In" placeholder="სასწავლებელი" type="text"   /></div>
+        <div><input class="learn-In" placeholder="სასწავლებელი" type="text"  onkeyup= "PAE(0);ValidateName(0)" /></div>
         <div class="Hint1">მინიმუმ 2 ასო, ქართული ასოები</div>
     </div>
 
@@ -57,27 +61,27 @@
     <div id="date">
         <div id="date-flex1">
           <div class="saxeli">ხარისხი</div>
-          <select class="Select-form"  onchange=""> 
+          <select class="Select-form"  onchange="PAE(0)"> 
             <option value="l78055">please select</option>
             
           </select>
         </div>
           <div id="date-flex2">
             <div class="saxeli">დამთავრების რიცხვი</div>
-            <input class="date-finish" type="date" onchange="" />
+            <input class="date-finish" type="date" onchange="Datefunction(0)" />
           </div>
     </div>
     
     <div id="Description">
         <div class="saxeli">აღწერა</div>
-        <div><textarea placeholder="განათლების აღწერა" class="info-In" type="text" onkeyup="" ></textarea></div>
+        <div><textarea placeholder="განათლების აღწერა" class="info-In" type="text" onkeyup="InfoFunction(0);Validateinfo(0)" ></textarea></div>
     </div>
     <div id="line2"></div>
 </div>
 
 <div><button id="Add" onclick="repeat()">მეტი გამოცდილების დამატება </button>
 <a href="Reg2.html"><button id="back-page" onclick="">BACK </button></a>
-<!-- <a href="Reg3.html"><button id="next-page" onclick="">NEXT </button></a> -->
+<a href="Finish.html"><button id="next-page" onclick="">Finish </button></a>
 </div>
 <!-- <div class="johnCena"></div> -->
 
